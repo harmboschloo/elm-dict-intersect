@@ -32,7 +32,9 @@ import Dict.Intersect.Internal as Internal
 -- 2 --
 
 
-{-| -}
+{-| Fold over the key-value pairs in 2 dictionaries from lowest key to highest key.
+Only keys that exist in both dictionaries are used.
+-}
 foldl2 :
     (comparable -> v1 -> v2 -> acc -> acc)
     -> acc
@@ -43,7 +45,9 @@ foldl2 =
     Internal.foldl2Optimized
 
 
-{-| -}
+{-| Fold over the key-value pairs in 2 dictionaries from highest key to lowest key.
+Only keys that exist in both dictionaries are used.
+-}
 foldr2 :
     (comparable -> v1 -> v2 -> acc -> acc)
     -> acc
@@ -58,7 +62,9 @@ foldr2 =
 -- 3 --
 
 
-{-| -}
+{-| Fold over the key-value pairs in 3 dictionaries from lowest key to highest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldl3 :
     (comparable -> v1 -> v2 -> v3 -> acc -> acc)
     -> acc
@@ -70,7 +76,9 @@ foldl3 =
     Internal.foldl3Optimized
 
 
-{-| -}
+{-| Fold over the key-value pairs in 3 dictionaries from highest key to lowest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldr3 :
     (comparable -> v1 -> v2 -> v3 -> acc -> acc)
     -> acc
@@ -86,7 +94,9 @@ foldr3 =
 -- 4 --
 
 
-{-| -}
+{-| Fold over the key-value pairs in 4 dictionaries from lowest key to highest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldl4 :
     (comparable -> v1 -> v2 -> v3 -> v4 -> acc -> acc)
     -> acc
@@ -99,7 +109,9 @@ foldl4 =
     Internal.foldl4Optimized
 
 
-{-| -}
+{-| Fold over the key-value pairs in 4 dictionaries from highest key to lowest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldr4 :
     (comparable -> v1 -> v2 -> v3 -> v4 -> acc -> acc)
     -> acc
@@ -116,7 +128,9 @@ foldr4 =
 -- 5 --
 
 
-{-| -}
+{-| Fold over the key-value pairs in 5 dictionaries from lowest key to highest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldl5 :
     (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> acc -> acc)
     -> acc
@@ -130,7 +144,9 @@ foldl5 =
     Internal.foldl5Optimized
 
 
-{-| -}
+{-| Fold over the key-value pairs in 5 dictionaries from highest key to lowest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldr5 :
     (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> acc -> acc)
     -> acc
@@ -148,7 +164,9 @@ foldr5 =
 -- 6 --
 
 
-{-| -}
+{-| Fold over the key-value pairs in 6 dictionaries from lowest key to highest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldl6 :
     (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> v6 -> acc -> acc)
     -> acc
@@ -163,7 +181,9 @@ foldl6 =
     Internal.foldl6Optimized
 
 
-{-| -}
+{-| Fold over the key-value pairs in 6 dictionaries from highest key to lowest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldr6 :
     (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> v6 -> acc -> acc)
     -> acc
@@ -182,7 +202,9 @@ foldr6 =
 -- 7 --
 
 
-{-| -}
+{-| Fold over the key-value pairs in 7 dictionaries from lowest key to highest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldl7 :
     (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> v6 -> v7 -> acc -> acc)
     -> acc
@@ -198,7 +220,9 @@ foldl7 =
     Internal.foldl7Optimized
 
 
-{-| -}
+{-| Fold over the key-value pairs in 7 dictionaries from highest key to lowest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldr7 :
     (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> v6 -> v7 -> acc -> acc)
     -> acc
@@ -218,7 +242,9 @@ foldr7 =
 -- 8 --
 
 
-{-| -}
+{-| Fold over the key-value pairs in 8 dictionaries from lowest key to highest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldl8 :
     (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> v6 -> v7 -> v8 -> acc -> acc)
     -> acc
@@ -235,7 +261,9 @@ foldl8 =
     Internal.foldl8Optimized
 
 
-{-| -}
+{-| Fold over the key-value pairs in 8 dictionaries from highest key to lowest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldr8 :
     (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> v6 -> v7 -> v8 -> acc -> acc)
     -> acc
@@ -256,7 +284,9 @@ foldr8 =
 -- 9 --
 
 
-{-| -}
+{-| Fold over the key-value pairs in 9 dictionaries from lowest key to highest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldl9 :
     (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> v6 -> v7 -> v8 -> v9 -> acc -> acc)
     -> acc
@@ -274,7 +304,9 @@ foldl9 =
     Internal.foldl9Optimized
 
 
-{-| -}
+{-| Fold over the key-value pairs in 9 dictionaries from highest key to lowest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldr9 :
     (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> v6 -> v7 -> v8 -> v9 -> acc -> acc)
     -> acc
@@ -296,7 +328,9 @@ foldr9 =
 -- 10 --
 
 
-{-| -}
+{-| Fold over the key-value pairs in 10 dictionaries from lowest key to highest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldl10 :
     (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> v6 -> v7 -> v8 -> v9 -> v10 -> acc -> acc)
     -> acc
@@ -315,7 +349,9 @@ foldl10 =
     Internal.foldl10Optimized
 
 
-{-| -}
+{-| Fold over the key-value pairs in 10 dictionaries from highest key to lowest key.
+Only keys that exist in all dictionaries are used.
+-}
 foldr10 :
     (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> v6 -> v7 -> v8 -> v9 -> v10 -> acc -> acc)
     -> acc
