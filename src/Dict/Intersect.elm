@@ -6,8 +6,6 @@ module Dict.Intersect exposing
     , foldl6, foldr6
     , foldl7, foldr7
     , foldl8, foldr8
-    , foldl9, foldr9
-    , foldl10, foldr10
     )
 
 {-|
@@ -19,8 +17,6 @@ module Dict.Intersect exposing
 @docs foldl6, foldr6
 @docs foldl7, foldr7
 @docs foldl8, foldr8
-@docs foldl9, foldr9
-@docs foldl10, foldr10
 
 -}
 
@@ -278,93 +274,3 @@ foldr8 :
     -> acc
 foldr8 =
     Internal.foldr8Optimized
-
-
-
--- 9 --
-
-
-{-| Fold over the key-value pairs in 9 dictionaries from lowest key to highest key.
-Only keys that exist in all dictionaries are used.
--}
-foldl9 :
-    (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> v6 -> v7 -> v8 -> v9 -> acc -> acc)
-    -> acc
-    -> Dict comparable v1
-    -> Dict comparable v2
-    -> Dict comparable v3
-    -> Dict comparable v4
-    -> Dict comparable v5
-    -> Dict comparable v6
-    -> Dict comparable v7
-    -> Dict comparable v8
-    -> Dict comparable v9
-    -> acc
-foldl9 =
-    Internal.foldl9Optimized
-
-
-{-| Fold over the key-value pairs in 9 dictionaries from highest key to lowest key.
-Only keys that exist in all dictionaries are used.
--}
-foldr9 :
-    (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> v6 -> v7 -> v8 -> v9 -> acc -> acc)
-    -> acc
-    -> Dict comparable v1
-    -> Dict comparable v2
-    -> Dict comparable v3
-    -> Dict comparable v4
-    -> Dict comparable v5
-    -> Dict comparable v6
-    -> Dict comparable v7
-    -> Dict comparable v8
-    -> Dict comparable v9
-    -> acc
-foldr9 =
-    Internal.foldr9Optimized
-
-
-
--- 10 --
-
-
-{-| Fold over the key-value pairs in 10 dictionaries from lowest key to highest key.
-Only keys that exist in all dictionaries are used.
--}
-foldl10 :
-    (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> v6 -> v7 -> v8 -> v9 -> v10 -> acc -> acc)
-    -> acc
-    -> Dict comparable v1
-    -> Dict comparable v2
-    -> Dict comparable v3
-    -> Dict comparable v4
-    -> Dict comparable v5
-    -> Dict comparable v6
-    -> Dict comparable v7
-    -> Dict comparable v8
-    -> Dict comparable v9
-    -> Dict comparable v10
-    -> acc
-foldl10 =
-    Internal.foldl10Optimized
-
-
-{-| Fold over the key-value pairs in 10 dictionaries from highest key to lowest key.
-Only keys that exist in all dictionaries are used.
--}
-foldr10 :
-    (comparable -> v1 -> v2 -> v3 -> v4 -> v5 -> v6 -> v7 -> v8 -> v9 -> v10 -> acc -> acc)
-    -> acc
-    -> Dict comparable v1
-    -> Dict comparable v2
-    -> Dict comparable v3
-    -> Dict comparable v4
-    -> Dict comparable v5
-    -> Dict comparable v6
-    -> Dict comparable v7
-    -> Dict comparable v8
-    -> Dict comparable v9
-    -> Dict comparable v10
-    -> acc
-foldr10 =
-    Internal.foldr10Optimized

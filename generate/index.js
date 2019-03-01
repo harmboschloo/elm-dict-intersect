@@ -5,7 +5,7 @@ const fs = require("fs");
 const internal = require("./internal");
 const { range } = require("./utils");
 
-const n = 10;
+const n = 8;
 const outputPath = path.resolve(__dirname, "../src");
 
 writeFile(`Dict/Intersect/Internal.elm`, internal.generate(n));

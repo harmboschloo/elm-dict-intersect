@@ -1,7 +1,7 @@
 {
   "type": "package",
   "name": "harmboschloo/elm-dict-intersect",
-  "summary": "Intesections for Dicts",
+  "summary": "Provides intersections of multiple dictionaries",
   "license": "BSD-3-Clause",
   "version": "1.0.0",
   "exposed-modules": [

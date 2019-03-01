@@ -1,12 +1,8 @@
-# Dict.Intersect
+module Main exposing (main)
 
-Provides intersections of multiple dictionaries based on their key.
-
-## Example
-
-```elm
 import Dict exposing (Dict)
 import Dict.Intersect
+import Html exposing (Html)
 
 
 type alias Car =
@@ -44,5 +40,10 @@ amphibians =
         boats
 
 
+
 -- amphibians == [ ( 2, { boat = { speed = 20 }, car = { wheels = 6 } } ) ]
-```
+
+
+main : Html msg
+main =
+    Html.text (Debug.toString amphibians)
