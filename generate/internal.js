@@ -8,10 +8,6 @@ exports.generate = n => {
   return `module Dict.Intersect.Internal exposing
     ( ${all.map(i => `fold${i}`).join(`
     , `)}
-    , ${all.map(i => `foldl${i}Optimized`).join(`
-    , `)}
-    , ${all.map(i => `foldr${i}Optimized`).join(`
-    , `)}
     )
 
 import Dict exposing (Dict)
@@ -22,13 +18,13 @@ import Dict exposing (Dict)
 
 ${generateFoldN(2)}
 
-foldl2Optimized :
+foldl2AutoSelect :
     (comparable -> v1 -> v2 -> acc -> acc)
     -> acc
     -> Dict comparable v1
     -> Dict comparable v2
     -> acc
-foldl2Optimized fn acc dict1 dict2 =
+foldl2AutoSelect fn acc dict1 dict2 =
     if Dict.size dict1 <= Dict.size dict2 then
         fold2 Dict.foldl fn acc dict1 dict2
 
@@ -36,13 +32,13 @@ foldl2Optimized fn acc dict1 dict2 =
         fold2 Dict.foldl (\\k v2 v1 acc_ -> fn k v1 v2 acc_) acc dict2 dict1
 
 
-foldr2Optimized :
+foldr2AutoSelect :
     (comparable -> v1 -> v2 -> acc -> acc)
     -> acc
     -> Dict comparable v1
     -> Dict comparable v2
     -> acc
-foldr2Optimized fn acc dict1 dict2 =
+foldr2AutoSelect fn acc dict1 dict2 =
     if Dict.size dict1 <= Dict.size dict2 then
         fold2 Dict.foldr fn acc dict1 dict2
 
@@ -54,9 +50,9 @@ ${all2.map(
 
 -- FOLD${i} --
 
-${generateFoldN(i)}
-${generateFoldNOptimized(i, "foldl")}
-${generateFoldNOptimized(i, "foldr")}`
+${generateFoldN(i)}${/*generateFoldNAutoSelect(i, "foldl")*/ ""}${
+    /*generateFoldNAutoSelect(i, "foldr")*/ ""
+  }`
 ).join(`
 `)}`;
 };
@@ -100,18 +96,18 @@ ${pad}        Nothing ->
 ${pad}            acc_`;
 };
 
-const generateFoldNOptimized = (n, foldFn) => {
+const generateFoldNAutoSelect = (n, foldFn) => {
   const values = range(1, n);
   const values2 = range(2, n);
 
   return `
-${foldFn}${n}Optimized :
+${foldFn}${n}AutoSelect :
     (comparable -> ${values.map(i => `v${i}`).join(" -> ")} -> acc -> acc)
     -> acc
     ${values.map(v => `-> Dict comparable v${v}`).join(`
     `)}
     -> acc
-${foldFn}${n}Optimized fn acc ${values.map(v => `dict${v}`).join(" ")} =
+${foldFn}${n}AutoSelect fn acc ${values.map(v => `dict${v}`).join(" ")} =
     let
         ${values.map(
           v =>

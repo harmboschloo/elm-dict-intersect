@@ -38,7 +38,7 @@ foldl2 :
     -> Dict comparable v2
     -> acc
 foldl2 =
-    Internal.foldl2Optimized
+    Internal.fold2 Dict.foldl
 
 
 {-| Fold over the key-value pairs in 2 dictionaries from highest key to lowest key.
@@ -51,7 +51,7 @@ foldr2 :
     -> Dict comparable v2
     -> acc
 foldr2 =
-    Internal.foldr2Optimized
+    Internal.fold2 Dict.foldr
 
 
 
@@ -69,7 +69,7 @@ foldl3 :
     -> Dict comparable v3
     -> acc
 foldl3 =
-    Internal.foldl3Optimized
+    Internal.fold3 Dict.foldl
 
 
 {-| Fold over the key-value pairs in 3 dictionaries from highest key to lowest key.
@@ -83,7 +83,7 @@ foldr3 :
     -> Dict comparable v3
     -> acc
 foldr3 =
-    Internal.foldr3Optimized
+    Internal.fold3 Dict.foldr
 
 
 
@@ -102,7 +102,7 @@ foldl4 :
     -> Dict comparable v4
     -> acc
 foldl4 =
-    Internal.foldl4Optimized
+    Internal.fold4 Dict.foldl
 
 
 {-| Fold over the key-value pairs in 4 dictionaries from highest key to lowest key.
@@ -117,7 +117,7 @@ foldr4 :
     -> Dict comparable v4
     -> acc
 foldr4 =
-    Internal.foldr4Optimized
+    Internal.fold4 Dict.foldr
 
 
 
@@ -137,7 +137,7 @@ foldl5 :
     -> Dict comparable v5
     -> acc
 foldl5 =
-    Internal.foldl5Optimized
+    Internal.fold5 Dict.foldl
 
 
 {-| Fold over the key-value pairs in 5 dictionaries from highest key to lowest key.
@@ -153,7 +153,7 @@ foldr5 :
     -> Dict comparable v5
     -> acc
 foldr5 =
-    Internal.foldr5Optimized
+    Internal.fold5 Dict.foldr
 
 
 
@@ -174,7 +174,7 @@ foldl6 :
     -> Dict comparable v6
     -> acc
 foldl6 =
-    Internal.foldl6Optimized
+    Internal.fold6 Dict.foldl
 
 
 {-| Fold over the key-value pairs in 6 dictionaries from highest key to lowest key.
@@ -191,7 +191,7 @@ foldr6 :
     -> Dict comparable v6
     -> acc
 foldr6 =
-    Internal.foldr6Optimized
+    Internal.fold6 Dict.foldr
 
 
 
@@ -213,7 +213,7 @@ foldl7 :
     -> Dict comparable v7
     -> acc
 foldl7 =
-    Internal.foldl7Optimized
+    Internal.fold7 Dict.foldl
 
 
 {-| Fold over the key-value pairs in 7 dictionaries from highest key to lowest key.
@@ -231,7 +231,7 @@ foldr7 :
     -> Dict comparable v7
     -> acc
 foldr7 =
-    Internal.foldr7Optimized
+    Internal.fold7 Dict.foldr
 
 
 
@@ -254,7 +254,7 @@ foldl8 :
     -> Dict comparable v8
     -> acc
 foldl8 =
-    Internal.foldl8Optimized
+    Internal.fold8 Dict.foldl
 
 
 {-| Fold over the key-value pairs in 8 dictionaries from highest key to lowest key.
@@ -273,4 +273,4 @@ foldr8 :
     -> Dict comparable v8
     -> acc
 foldr8 =
-    Internal.foldr8Optimized
+    Internal.fold8 Dict.foldr
