@@ -46,3 +46,7 @@ amphibians =
 
 -- amphibians == [ ( 2, { boat = { speed = 20 }, car = { wheels = 6 } } ) ]
 ```
+
+## Note on performance
+
+When folding over multiple dictionaries it is generally faster to have the smallest dictionary as the first argument and the one with the least amount of intersections next. See [these benchmarks](https://github.com/harmboschloo/elm-dict-intersect/blob/master/benchmarks/src/OrderPerformance.elm) for an example.
